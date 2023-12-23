@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.*;
+
 /*
  * Goal: Implement left and right rotate methods.
  * 
@@ -22,19 +24,33 @@ import org.junit.jupiter.api.Test;
  * For a right rotate the number is not discarded and it's placed on the left,
  * the most significant bit (bit 31).
  * 
- * The same goes for a left rotate:
+ * The same goes for a left rotate: 
  *      11111111 11111111 11111111 11111000   // original value of -8
  *      11111111 11111111 11111111 11110001   // rotate left by 1
  */
 public class _02_Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
-        return -1;
+    	
+    	
+    	
+        return java.util.Collections.rotate(value, rotateAmount);
     }
     
     int rotateRight(int value, int rotateAmount) {
-        return -1;
+    	
+    	return Integer.toBinaryString(-7 >>> 1);
     }
+    
+    
+    //@Test
+    //int HIIIII()) {
+    	
+    	//System.out.println(value >>> rotateAmount);
+    	//System.out.println(Integer.toBinaryString(-7 >>> 1));
+    	
+    	
+    //}
     
     @Test
     void testRotateLeft() {
