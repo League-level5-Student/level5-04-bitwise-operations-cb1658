@@ -31,15 +31,11 @@ import java.util.*;
 public class _02_Rotate {
     
     int rotateLeft(int value, int rotateAmount) {
-    	
-    	
-    	
-        return java.util.Collections.rotate(value, rotateAmount);
+    	return (value << rotateAmount) | (value >>> (32- rotateAmount));
     }
     
-    int rotateRight(int value, int rotateAmount) {
-    	
-    	return Integer.toBinaryString(-7 >>> 1);
+    int rotateRight(int value, int rotateAmount) {    	
+    	return (value >>> rotateAmount) | (value << (32- rotateAmount));
     }
     
     
