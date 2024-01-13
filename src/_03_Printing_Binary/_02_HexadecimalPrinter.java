@@ -51,23 +51,43 @@ public class _02_HexadecimalPrinter implements ActionListener {
      * Complete these 3 methods. Assume the binary value is an int (32 bits).
      * You don't have to handle negative numbers unless you want the challenge!
      */
+    
     String binaryToHex(String binaryStr) {
-        return "-";
+    	
+    	int decimal = Integer.parseInt(binaryStr,2);
+    	
+    	String hex = Integer.toHexString(decimal);
+    	
+    	hex = hex.toUpperCase();
+    	
+        return hex;
     }
     
     String binaryToDec(String binaryStr) {
-        return "-";
+        return "" + Integer.parseInt(binaryStr,2);
     }
 
     /*
      * ASCII values are exactly 8 bits so return '-' if there isn't.
      */
     String binaryToAscii(String binaryStr) {
+    	
+    	int length = binaryStr.length();
+    	
         if (binaryStr.length() != 8) {
             return "-";
         }
 
-        return "-";
+        String finalans = "";
+        
+        for(int i = 0; i < length; i++) {
+        	int decimalValue = Integer.parseInt(binaryStr);
+        	
+        	finalans += (char) decimalValue;
+        }
+        
+        
+        return finalans;
     }
     
     public static void main(String[] args) {
